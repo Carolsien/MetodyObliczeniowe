@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+  - 2.2.3
+before_install:
+  - gem update --system
+  - gem --version
+install:
+  - gem install rspec
+  - gem install simplecov
+provider: script
+script:
+  - rspec
