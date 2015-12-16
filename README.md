@@ -1,2 +1,4 @@
-Dla podanych z wejúcia: naturalnej n >= 1, koÒcÛw a i b przedzia≥u [a,b], oraz zestawu wartoúci yi, zi, 0 <= i <= n, przygotowaÊ wÍz≥y rÛwnoodleg≥e xi = a + ih, 0 <= i <= n, gdzie h = (b ñ a) / n i wypisaÊ w postaci Newtona wielomian H stopnia k = 2n +1 taki, øe H(xi) = yi, Hi'(xi) = zi, 0 <= i <= n. 
-NastÍpnie tyle razy, ile zechce uøytkownik wczytaÊ liczbÍ t naleøy do R rÛønπ od wÍz≥Ûw i wyznaczyÊ wartoúci H(t) oraz H'(t).
+Hermit [![Build Status](https://travis-ci.org/mklemarczyk/MetodyObliczeniowe.svg?branch=master)](https://travis-ci.org/mklemarczyk/MetodyObliczeniowe)
+
+Dla podanych z wej≈õcia: naturalnej n >= 1, ko≈Ñc√≥w a i b przedzia≈Çu [a,b], oraz zestawu warto≈õci yi, zi, 0 <= i <= n, przygotowaƒá wƒôz≈Çy r√≥wnoodleg≈Çe xi = a + ih, 0 <= i <= n, gdzie h = (b ‚Äì a) / n i wypisaƒá w postaci Newtona wielomian H stopnia k = 2n +1 taki, ≈ºe H(xi) = yi, Hi'(xi) = zi, 0 <= i <= n. 
+Nastƒôpnie tyle razy, ile zechce u≈ºytkownik wczytaƒá liczbƒô t nale≈ºy do R r√≥≈ºnƒÖ od wƒôz≈Ç√≥w i wyznaczyƒá warto≈õci H(t) oraz H'(t).
