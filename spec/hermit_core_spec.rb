@@ -24,7 +24,7 @@ RSpec.describe Hermit do
 		
 			h = Hermit.new(a,b,n,y,z)
 			
-			expect(v.x).to eq [6, 6.5, 7, 7.5, 8]
+			expect(h.x).to eq [6, 6.5, 7, 7.5, 8]
 		end
 	end
 end
