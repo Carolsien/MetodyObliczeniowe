@@ -1,16 +1,17 @@
 class Hermit
-	@n
-	@a
-	@b
-	@x
-	@y
-	@z
+	@n # Liczba podprzedzialow
+	@a # Poczatek przedzialu
+	@b # Koniec przedzialu
+	@x # Punkty wezlowe siatki
+	@y # Wartosci f(x)
+	@z # Wartosci f'(x)
 	
-	@t
-	@f0
-	@f
+	@t # Generowana lista dwukrotnych x
+	@f0 # Generowana lista wartosci
+	@f # Wynikowa lista metody
 
-	@debug = false
+	@debug = false # Flaga wyswietlania danych kontrolnych
+
     def initialize(a, b, n, y, z)
 		@a = a.to_f
 		@b = b.to_f
@@ -104,9 +105,11 @@ class Hermit
     end
 
 	def newton(n, k, setT)
+		# Generowanie podzbiorow k elementowych z pierwszych n elementow zbioru setT
 		setT.take(n).combination(k).to_a
 	end
 
+	# Funkcja generujaca liste wspolczynnikow dla kolejnych poteg x (x^0, x^1, x^2 ...) w celu wydruku
     def getW()
 		t = @t
 		f = @f
@@ -149,6 +152,7 @@ class Hermit
 		return wynik
     end
 
+	# Wydrukowanie na ekran wielomianu przy pomocy listy wspolczynnikow dla kolejnych poteg x (x^0, x^1, x^2 ...)
 	def printW(w)
 		puts "\n" if @debug == true
 		puts "\n" if @debug == true
@@ -160,7 +164,8 @@ class Hermit
 			print "x^#{i}" unless w[i] == 0
 		end
 	end
-	
+
+	# Gettery
 	def a()
 		@a
 	end
