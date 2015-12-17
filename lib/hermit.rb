@@ -1,4 +1,4 @@
-require 'hermitcore'
+require "hermitcore"
 
 #pobranie wartosci n
 puts "Podaj liczbe naturalna n: "
@@ -13,12 +13,12 @@ else
 end
 
 #pobranie przedzialu ab
-puts "Podaj liczbe naturalna a: "
-a = $stdin.gets.chomp.to_i
-puts "Podaj liczbe naturalna b: "
-b = $stdin.gets.chomp.to_i
+puts "Podaj liczbe a: "
+a = $stdin.gets.chomp.to_f
+puts "Podaj liczbe b: "
+b = $stdin.gets.chomp.to_f
 if(a > b || a == b)
-	puts "Lewa wartosc (a) przedziału powinna byc wieksza niz prawa wartosc (b)"
+	puts "Lewa wartosc (a) przedzialu powinna byc wieksza niz prawa wartosc (b)"
 	until a < b do
 		puts "Podaj liczbe naturalna a: "
 		a = $stdin.gets.chomp.to_i
