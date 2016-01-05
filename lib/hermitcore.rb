@@ -82,7 +82,7 @@ class Hermit
 					print " #{k}  |" if @debug == true
 				else
 					k = ((tab[i-1][j+1] - tab[i-1][j]) / d).to_f
-					puts "#{i} #{j}"
+					puts "#{i} #{j}" if @debug == true
 					tab[i][j] = k
 					wynik.push(k) if j == 0
 					if k < 0
