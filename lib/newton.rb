@@ -5,7 +5,7 @@ def numeric?(object)
 	true if Float(object) rescue false
 end
 
-do
+begin
 	#pobranie wartosci n
 	puts "Podaj liczbe naturalna n: "
 	n = $stdin.gets.chomp.to_i
@@ -42,4 +42,4 @@ do
 	puts "Czy kontynuowac? y/n"
 	input = $stdin.gets.chomp
 
-while (!input.eq? "n")
+end while (!input.eq? "n")
