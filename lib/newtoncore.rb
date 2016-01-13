@@ -7,12 +7,19 @@ class Newton
 		@v0 = Vector[x0, y0]
     end
 
-    def compute(n)
+    def compute(k)
+		prec = 0.1 ** k
 		v = @v0
+		last = Vector[@v0[0] - 2 * prec, @v0[1] + 2 * prec]
+		n = 100
 
-		for i in Range.new(0, n)
+		i = 0
+		while i < n and ((last[0] - v[0]).abs > prec or (last[1] - v[1]).abs > prec)
+			last = v
 			v = iter(v)
+			i = i + 1
 		end
+		
 		return v
     end
 
