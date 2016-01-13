@@ -42,4 +42,4 @@ begin
 	puts "Czy kontynuowac? y/n"
 	input = $stdin.gets.chomp
 
-end while (!input.eq? "n")
+end while (input != "n")
