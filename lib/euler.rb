@@ -16,7 +16,7 @@ end
 puts
 
 $filtr = 1
-$h = a/n
+$h = (a / n)
 puts "h = #{$h}"
 puts
 
@@ -31,25 +31,30 @@ $yz.push(0)
 def f(x,y)
   x = x.to_f
   y = y.to_f
-  (y**2.0+2.0*x*y+x**2.0)-x**4.0+2.0*x-1.0
+  return (((y + x) ** 2.0) - (x ** 4.0) + (2.0 * x) - 1.0)
 end
 
 def Xk(k)
-  $x[k-1] + $h
+  return($x[k-1] + $h)
 end
 
 def Yk(k)
-  $y[k-1] + $h*f($x[k-1], $y[k-1])
+  x = $x[k-1].to_f
+  y = $y[k-1].to_f
+  return (y + $h * f(x, y))
 end
 
-def Ykz(k)
-  $y[k-1] + $h*f($x[k-1]+$h/2.0, $y[k-1]+$h/2.0*f($x[k-1],$y[k-1]))
+def YZk(k)
+  x = $x[k-1].to_f
+  y = $yz[k-1].to_f
+  h2 = $h / 2.0
+  return (y + $h * f(x + h2, y + h2 * f(x, y)))
 end
 
 for k in 1...n
   $x.push(Xk(k))
   $y.push(Yk(k))
-  $yz.push(Ykz(k))
+  $yz.push(YZk(k))
 end
 
 =begin
@@ -69,7 +74,7 @@ puts
 
 def dobra(x)
   x = x.to_f
-  return x**2 - x
+  return (x ** 2) - x
 end
 
 def errory(x, metY)
@@ -82,7 +87,7 @@ def druknij(du)
   t = du.to_s
   printf t
   z = 25 - t.size
-  printf ' '*z
+  printf ' ' * z
 end
 
 for k in 0...n
@@ -95,4 +100,3 @@ for k in 0...n
   druknij(byz)
   puts
 end
-
