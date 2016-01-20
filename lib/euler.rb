@@ -73,7 +73,7 @@ def errory(x, metY)
   return (dobra(x) - metY).abs
 end
 
-puts 'X:                       Y:                       BY:                      YZ:                      BYZ:'
+puts 'X:                       Y (Euler):               Blad metody:             Y (Zmodyfikowany euler): Blad metody:'
 
 def druknij(du)
   t = du.to_s
