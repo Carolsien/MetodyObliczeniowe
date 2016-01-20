@@ -2,7 +2,7 @@ system("cls")
 puts 'Podaj n... (n >= 1)'
 n = gets.chomp.to_f
 while n < 1
-  puts 'Podaj wartość >= 1'
+  puts 'Podaj wartosc >= 1'
   n = gets.chomp.to_f
 end
 puts
@@ -10,7 +10,7 @@ puts
 puts 'Podaj a... (a > 0)'
 a = gets.chomp.to_f
 while a <= 0
-  puts 'Podaj wartość > 0'
+  puts 'Podaj wartosc > 0'
   a = gets.chomp.to_f
 end
 puts
@@ -28,8 +28,10 @@ $x.push(0)
 $y.push(0)
 $yz.push(0)
 
-def pochwa(x,y)
-  (y**2+2*x*y+x**2)-x**4+2*x-1
+def f(x,y)
+  x = x.to_f
+  y = y.to_f
+  (y**2.0+2.0*x*y+x**2.0)-x**4.0+2.0*x-1.0
 end
 
 def Xk(k)
@@ -37,11 +39,11 @@ def Xk(k)
 end
 
 def Yk(k)
-  $y[k-1] + $h*pochwa($x[k-1], $y[k-1])
+  $y[k-1] + $h*f($x[k-1], $y[k-1])
 end
 
 def Ykz(k)
-  $y[k-1] + $h*pochwa($x[k-1]+$h/2, $y[k-1]+$h/2*pochwa($x[k-1],$y[k-1]))
+  $y[k-1] + $h*f($x[k-1]+$h/2.0, $y[k-1]+$h/2.0*f($x[k-1],$y[k-1]))
 end
 
 for k in 1...n
@@ -66,6 +68,7 @@ puts
 =end
 
 def dobra(x)
+  x = x.to_f
   return x**2 - x
 end
 
@@ -92,3 +95,4 @@ for k in 0...n
   druknij(byz)
   puts
 end
+
