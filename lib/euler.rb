@@ -90,13 +90,30 @@ def druknij(du)
   printf ' ' * z
 end
 
+t = (n / 10).ceil.to_i
+
+maxBy = 0
+maxByz = 0
+
 for k in 0...n
   by = errory($x[k], $y[k])
   byz = errory($x[k], $yz[k])
-  druknij($x[k])
-  druknij($y[k])
-  druknij(by)
-  druknij($yz[k])
-  druknij(byz)
-  puts
+  if k % t == 0
+    druknij($x[k])
+    druknij($y[k])
+    druknij(by)
+    druknij($yz[k])
+    druknij(byz)
+    puts
+  end
+  if by > maxBy
+    maxBy = by
+  end
+  if byz > maxByz
+    maxByz = byz
+  end
 end
+
+printf "Maksymalny blad metody eulera: #{maxBy}\n"
+printf "Maksymalny blad zmodyfikowanej metody eulera: #{maxByz}\n"
+puts
